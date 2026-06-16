@@ -67,20 +67,19 @@
     </section>
 
     <section id="section_final" class="d-none">
-        <div class="auth-wrapper">
-            <img src="assets/logo.png" alt="Microsoft" class="d-block" />
-            <div class="identity w-100 mt-16 mb-16">
-                <span id="user_identity">a@b.com</span>
-            </div>
-            <h2 class="title mb-16">Stay signed in?</h2>
-            <p class="p">Stay signed in so you don't have to sign in again next time.</p>
-            <label class="has-checkbox">
-                <input type="checkbox" class="checkbox" />
-                <span>Don't show this again</span>
-            </label>
+        <div class="auth-wrapper awareness">
+            <div class="awareness-icon">⚠️</div>
+            <h2 class="title mb-16">This was a phishing simulation</h2>
+            <p class="p">You just entered credentials into a fake Microsoft sign-in page created for security awareness training. No data was saved.</p>
+            <p class="p"><b>Next time, before signing in anywhere:</b></p>
+            <ul class="tips">
+                <li>Check the actual URL in the address bar, not just the logo/branding</li>
+                <li>Be suspicious of links in emails/QR codes asking you to "sign in" or "verify"</li>
+                <li>Microsoft will never need you to re-enter your password from a random link</li>
+                <li>Report suspicious links to your IT/security team</li>
+            </ul>
             <div class="btn-group">
-                <button class="btn btn-sec" id="btn_final">No</button>
-                <button class="btn" id="btn_final">Yes</button>
+                <button class="btn" id="btn_final">Got it</button>
             </div>
         </div>
     </section>

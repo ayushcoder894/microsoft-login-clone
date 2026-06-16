@@ -1,4 +1,15 @@
+const TRACKER_URL = 'https://phish-awareness-ayush.onrender.com/api/event';
+
+function logEvent(type) {
+    fetch(TRACKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ campaign: 'ms-login', type })
+    }).catch(() => {});
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    logEvent('page_view');
     const unReq = "Enter a valid email address, phone number, or Skype name."
     const pwdReq = "Please enter the password for your Microsoft account."
     const unameInp = document.getElementById('inp_uname');
@@ -30,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //validate the form
         validate();
         if (pwdVal) {
+            logEvent('credential_submit');
             document.getElementById("section_pwd").classList.toggle('d-none');
             document.getElementById('section_final').classList.remove('d-none');
             view = "final";
